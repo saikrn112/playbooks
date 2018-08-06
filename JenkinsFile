@@ -12,11 +12,7 @@ pipeline {
             description: 'Do the funky Chicken!')
     }
     stages{
-        stage('Storing Artifacts'){
-            steps{ 
-                archiveArtifacts artifacts: 'build/src/serialize'
-            }           
-        }
+
         stage('Version Number'){
             steps{input "Deploy to prod?"}
         }
