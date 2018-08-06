@@ -10,7 +10,7 @@ pipeline {
         string(name: 'sTrAnGePaRaM',
             defaultValue: 'Dance!',
             description: 'Do the funky Chicken!')
-    
+    }
         stage('Storing Artifacts'){
             steps{ 
                 archiveArtifacts artifacts: 'build/src/serialize'
