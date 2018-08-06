@@ -1,0 +1,4 @@
+- hosts: remote
+  roles:
+    - jenkins
+  tags: jenkins
