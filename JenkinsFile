@@ -1,8 +1,10 @@
 pipeline {
     agent any
-    gitParameter name: 'TAG_SIDE', 
-                 type: 'PT_TAG',
-                 defaultValue: 'master'
+    parameters {
+        gitParameter name: 'TAG', 
+                     type: 'PT_TAG',
+                     defaultValue: 'master'
+    }
     stages{
 	stage('New version') {
 	    steps{
