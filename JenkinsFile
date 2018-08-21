@@ -1,10 +1,20 @@
 pipeline {
     agent any
+    gitParameter name: 'TAG_SIDE', 
+                 type: 'PT_TAG',
+                 defaultValue: 'master'
     stages{
 	stage('New version') {
 	    steps{
       	    dir('copy_playbook'){
-    		git url: 'https://github.com/saikrn112/fileio.git'	    
+		checkout([$class: 'GitSCM', 
+                          branches: [[name: "${params.TAG_SIDE}"]], 
+                          doGenerateSubmoduleConfigurations: false, 
+                          extensions: [], 
+                          gitTool: 'Default', 
+                          submoduleCfg: [], 
+                          userRemoteConfigs: [[url: 'https://github.com/saikrn112/fileio.git']]
+                        ])
     	    }
 	    }
 	}
