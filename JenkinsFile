@@ -4,7 +4,7 @@ pipeline {
 	stage('New version') {
 	    setps{
       	    dir('copy_playbook'){
-    		git url: 'https://github.com/saikrn112/playbooks.git'	    
+    		git url: 'https://github.com/saikrn112/fileio.git'	    
     	    }
 	    }
 	}
