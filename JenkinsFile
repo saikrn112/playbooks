@@ -2,8 +2,10 @@ pipeline {
     agent any
     stages{
 	stage('New version') {
-  	    dir('copy_playbook'){
-		git url: 'https://github.com/saikrn112/playbooks.git'	    
+	    setps{
+      	    dir('copy_playbook'){
+    		git url: 'https://github.com/saikrn112/playbooks.git'	    
+    	    }
 	    }
 	}
         stage('Version Number'){
