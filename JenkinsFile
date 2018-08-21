@@ -5,6 +5,7 @@ pipeline {
   	    dir('copy_playbook'){
 		git url: 'https://github.com/saikrn112/playbooks.git'	    
 	    }
+	}
         stage('Version Number'){
             steps{input "Deploy to prod?"}
         }
