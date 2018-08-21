@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages{
 	stage('New version') {
-	    setps{
+	    steps{
       	    dir('copy_playbook'){
     		git url: 'https://github.com/saikrn112/fileio.git'	    
     	    }
