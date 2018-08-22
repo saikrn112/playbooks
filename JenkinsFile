@@ -1,11 +1,5 @@
 pipeline {
     agent any
-    parameters {
-        gitParameter name: 'TAG_SIDE', 
-                     type: 'PT_TAG',
-                     defaultValue: 'master'
-                     useRepository: 'https://github.com/saikrn112/fileio.git'
-    }
     stages{
 	stage('New version') {
 	    steps{
